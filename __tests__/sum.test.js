@@ -1,7 +1,7 @@
 // sum.test.js
 
 test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(4); //changed value to 4
+  expect(1 + 2).toBe(3); //changed value back to 3
 });
 
 import { sum } from '../code-to-unit-test/sum';
