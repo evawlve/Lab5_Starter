@@ -13,21 +13,21 @@ function init() {
 
   function populateVoiceList() {
     voices = synth.getVoices();
-    voiceSelect.innerHTML = ''; // Clear existing options
+    voiceSelect.innerHTML = ''; 
     for (let i = 0; i < voices.length; i++) {
       let option = document.createElement('option');
       option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
       option.setAttribute('data-name', voices[i].name);
       voiceSelect.appendChild(option);
     }
-    console.log('Voices loaded:', voices); // Log to check voices loaded
+    console.log('Voices loaded:', voices); 
   }
 
-  // Ensure voices are loaded when available
+  // Ensure voices are loaded 
   if (speechSynthesis.onvoiceschanged !== undefined) {
     speechSynthesis.onvoiceschanged = populateVoiceList;
   } else {
-    populateVoiceList(); // Manually call if onvoiceschanged is not supported
+    populateVoiceList(); 
   }
 
   talkButton.addEventListener('click', function() {
@@ -45,7 +45,7 @@ function init() {
       let selectedVoice = voices.find(v => v.name === voiceName);
       utterance.voice = selectedVoice;
       
-      console.log('Using voice:', selectedVoice); // Log the selected voice
+      console.log('Using voice:', selectedVoice); // Log the  voice
 
       utterance.onend = function(event) {
         console.log('SpeechSynthesisUtterance.onend');

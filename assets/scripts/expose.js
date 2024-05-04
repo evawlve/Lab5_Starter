@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   const hornSelect = document.getElementById('horn-select');
   const volumeSlider = document.getElementById('volume');
-  const hornImage = document.querySelector('img'); // Assuming it's the only image element in the section
+  const hornImage = document.querySelector('img'); 
   const volumeIcon = document.querySelector('#volume-controls img');
   const audioPlayer = document.querySelector('audio');
   const playButton = document.querySelector('button');
